@@ -1,20 +1,26 @@
 # Send Paco
 
-A new Flutter project.
+Projeto se trata de envios de templates de mensagens por e-mail, sms e whatsapp via API.
 
-## Getting Started
+## Módulos desenvolvidos
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
+- Autenticação de usuários
+- Cadastro de contatos
+- Cadastro de clientes
+- Cadastro de template de mensagens
+- Integração com API Whatsapp, para envio de mensagens
+- Integração com a Ótima SMS
+- Integração com a SparkPOST API
 
-### Getting started continued:
+### Tecnologias utilizadas
 
-This project is a starting point for a Flutter application.
+- Flutterflow
+- MySQL
+- API Rest
 
-A few resources to get you started if this is your first Flutter project:
+### Equipe
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Gabriel Souza
+- Irina Bittencourt
+- Winicius Castanha
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
