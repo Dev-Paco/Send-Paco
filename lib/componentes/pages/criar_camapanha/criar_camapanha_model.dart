@@ -36,6 +36,9 @@ class CriarCamapanhaModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController3;
   String? Function(BuildContext, String?)? textController3Validator;
+  // State field(s) for TextField widget.
+  TextEditingController? textController4;
+  String? Function(BuildContext, String?)? textController4Validator;
 
   /// Initialization and disposal methods.
 
@@ -49,6 +52,7 @@ class CriarCamapanhaModel extends FlutterFlowModel {
     textController1?.dispose();
     textController2?.dispose();
     textController3?.dispose();
+    textController4?.dispose();
   }
 
   /// Action blocks are added here.

@@ -34,12 +34,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => HomeWidget(),
+      errorBuilder: (context, state) => CriarTempNovaWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => HomeWidget(),
+          builder: (context, _) => CriarTempNovaWidget(),
         ),
         FFRoute(
           name: 'Login',
@@ -57,19 +57,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => RecuperacaoSenhaMsgWidget(),
         ),
         FFRoute(
-          name: 'Home',
-          path: '/home',
-          builder: (context, params) => HomeWidget(),
-        ),
-        FFRoute(
           name: 'TemplatesNova',
           path: '/templatesNova',
           builder: (context, params) => TemplatesNovaWidget(),
         ),
         FFRoute(
-          name: 'CriarTemplate',
-          path: '/criarTemplate',
-          builder: (context, params) => CriarTemplateWidget(),
+          name: 'CriarCamapanha',
+          path: '/criarCamapanha',
+          builder: (context, params) => CriarCamapanhaWidget(),
+        ),
+        FFRoute(
+          name: 'HomeNova',
+          path: '/homeNova',
+          builder: (context, params) => HomeNovaWidget(),
         ),
         FFRoute(
           name: 'Campanhas',
@@ -77,14 +77,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => CampanhasWidget(),
         ),
         FFRoute(
-          name: 'Templates',
-          path: '/templates',
-          builder: (context, params) => TemplatesWidget(),
-        ),
-        FFRoute(
-          name: 'CriarCamapanha',
-          path: '/criarCamapanha',
-          builder: (context, params) => CriarCamapanhaWidget(),
+          name: 'CriarTempNova',
+          path: '/criarTempNova',
+          builder: (context, params) => CriarTempNovaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

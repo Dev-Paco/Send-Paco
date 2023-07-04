@@ -82,7 +82,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                             _model.menuOn = false;
                           });
 
-                          context.pushNamed('Home');
+                          context.pushNamed('HomeNova');
                         },
                         child: Icon(
                           Icons.home,
@@ -164,7 +164,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                           _model.menuOn = false;
                         });
 
-                        context.pushNamed('Home');
+                        context.pushNamed('HomeNova');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -210,7 +210,11 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        context.pushNamed('Templates');
+                        setState(() {
+                          _model.menuOn = false;
+                        });
+
+                        context.pushNamed('TemplatesNova');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -250,41 +254,55 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                         ].divide(SizedBox(height: 5.0)),
                       ),
                     ),
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 40.0,
-                          height: 40.0,
-                          decoration: BoxDecoration(
-                            color: Color(0x00FFFFFF),
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(
-                              color: Color(0xFFC8C8C8),
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        setState(() {
+                          _model.menuOn = false;
+                        });
+
+                        context.pushNamed('Campanhas');
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 40.0,
+                            height: 40.0,
+                            decoration: BoxDecoration(
+                              color: Color(0x00FFFFFF),
+                              borderRadius: BorderRadius.circular(8.0),
+                              border: Border.all(
+                                color: Color(0xFFC8C8C8),
+                              ),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: SvgPicture.asset(
+                                'assets/images/mdi_send-circle-outline.svg',
+                                width: 300.0,
+                                height: 200.0,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
-                            child: SvgPicture.asset(
-                              'assets/images/mdi_send-circle-outline.svg',
-                              width: 300.0,
-                              height: 200.0,
-                              fit: BoxFit.cover,
-                            ),
+                          Text(
+                            'Campanhas',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Axiforma',
+                                  color: Color(0xFF221F2C),
+                                  fontSize: 12.0,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                        ),
-                        Text(
-                          'Campanhas',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Axiforma',
-                                    color: Color(0xFF221F2C),
-                                    fontSize: 12.0,
-                                    useGoogleFonts: false,
-                                  ),
-                        ),
-                      ].divide(SizedBox(height: 5.0)),
+                        ].divide(SizedBox(height: 5.0)),
+                      ),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
