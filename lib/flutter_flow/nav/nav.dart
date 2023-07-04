@@ -34,12 +34,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => CriarTempNovaWidget(),
+      errorBuilder: (context, state) => HomeWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => CriarTempNovaWidget(),
+          builder: (context, _) => HomeWidget(),
         ),
         FFRoute(
           name: 'Login',
@@ -57,19 +57,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => RecuperacaoSenhaMsgWidget(),
         ),
         FFRoute(
-          name: 'TemplatesNova',
-          path: '/templatesNova',
-          builder: (context, params) => TemplatesNovaWidget(),
+          name: 'Templates',
+          path: '/templates',
+          builder: (context, params) => TemplatesWidget(),
         ),
         FFRoute(
-          name: 'CriarCamapanha',
-          path: '/criarCamapanha',
-          builder: (context, params) => CriarCamapanhaWidget(),
-        ),
-        FFRoute(
-          name: 'HomeNova',
-          path: '/homeNova',
-          builder: (context, params) => HomeNovaWidget(),
+          name: 'Home',
+          path: '/home',
+          builder: (context, params) => HomeWidget(),
         ),
         FFRoute(
           name: 'Campanhas',
@@ -77,9 +72,49 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => CampanhasWidget(),
         ),
         FFRoute(
-          name: 'CriarTempNova',
-          path: '/criarTempNova',
-          builder: (context, params) => CriarTempNovaWidget(),
+          name: 'CriarTemplates',
+          path: '/criarTemplates',
+          builder: (context, params) => CriarTemplatesWidget(),
+        ),
+        FFRoute(
+          name: 'CriarCampanhas',
+          path: '/criarCampanhas',
+          builder: (context, params) => CriarCampanhasWidget(),
+        ),
+        FFRoute(
+          name: 'Contatos',
+          path: '/contatos',
+          builder: (context, params) => ContatosWidget(),
+        ),
+        FFRoute(
+          name: 'CriarContato',
+          path: '/criarContato',
+          builder: (context, params) => CriarContatoWidget(),
+        ),
+        FFRoute(
+          name: 'Canais',
+          path: '/canais',
+          builder: (context, params) => CanaisWidget(),
+        ),
+        FFRoute(
+          name: 'Usuarios',
+          path: '/usuarios',
+          builder: (context, params) => UsuariosWidget(),
+        ),
+        FFRoute(
+          name: 'Grupos',
+          path: '/grupos',
+          builder: (context, params) => GruposWidget(),
+        ),
+        FFRoute(
+          name: 'EditarContato',
+          path: '/editarContato',
+          builder: (context, params) => EditarContatoWidget(),
+        ),
+        FFRoute(
+          name: 'Empresas',
+          path: '/empresas',
+          builder: (context, params) => EmpresasWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

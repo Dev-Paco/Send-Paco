@@ -1,4 +1,4 @@
-import '/components/header_widget.dart';
+import '/componentes/header/header_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -7,25 +7,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'templates_nova_model.dart';
-export 'templates_nova_model.dart';
+import 'templates_model.dart';
+export 'templates_model.dart';
 
-class TemplatesNovaWidget extends StatefulWidget {
-  const TemplatesNovaWidget({Key? key}) : super(key: key);
+class TemplatesWidget extends StatefulWidget {
+  const TemplatesWidget({Key? key}) : super(key: key);
 
   @override
-  _TemplatesNovaWidgetState createState() => _TemplatesNovaWidgetState();
+  _TemplatesWidgetState createState() => _TemplatesWidgetState();
 }
 
-class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
-  late TemplatesNovaModel _model;
+class _TemplatesWidgetState extends State<TemplatesWidget> {
+  late TemplatesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TemplatesNovaModel());
+    _model = createModel(context, () => TemplatesModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -255,7 +255,7 @@ class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
                                                                     onPressed:
                                                                         () async {
                                                                       context.pushNamed(
-                                                                          'null');
+                                                                          'CriarTemplates');
                                                                     },
                                                                     text:
                                                                         'Novo Template',
@@ -668,7 +668,7 @@ class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
                                                               child: Container(
                                                                 width: double
                                                                     .infinity,
-                                                                height: 46.0,
+                                                                height: 64.0,
                                                                 decoration:
                                                                     BoxDecoration(
                                                                   color: Color(
@@ -685,7 +685,7 @@ class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
                                                                         width:
                                                                             250.0,
                                                                         height:
-                                                                            46.0,
+                                                                            64.0,
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
@@ -710,7 +710,7 @@ class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Axiforma',
                                                                                       color: Color(0xFF414042),
-                                                                                      fontSize: 12.0,
+                                                                                      fontSize: 14.0,
                                                                                       useGoogleFonts: false,
                                                                                     ),
                                                                               ),
@@ -725,7 +725,7 @@ class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
                                                                         width:
                                                                             250.0,
                                                                         height:
-                                                                            46.0,
+                                                                            64.0,
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
@@ -767,7 +767,7 @@ class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
                                                                         width:
                                                                             250.0,
                                                                         height:
-                                                                            46.0,
+                                                                            64.0,
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
@@ -800,7 +800,7 @@ class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
                                                                         width:
                                                                             270.0,
                                                                         height:
-                                                                            46.0,
+                                                                            64.0,
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
@@ -831,7 +831,7 @@ class _TemplatesNovaWidgetState extends State<TemplatesNovaWidget> {
                                                                       width:
                                                                           250.0,
                                                                       height:
-                                                                          46.0,
+                                                                          64.0,
                                                                       decoration:
                                                                           BoxDecoration(
                                                                         color: Color(

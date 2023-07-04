@@ -1,29 +1,29 @@
-import '/components/header_widget.dart';
+import '/componentes/header/header_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'home_nova_model.dart';
-export 'home_nova_model.dart';
+import 'home_model.dart';
+export 'home_model.dart';
 
-class HomeNovaWidget extends StatefulWidget {
-  const HomeNovaWidget({Key? key}) : super(key: key);
+class HomeWidget extends StatefulWidget {
+  const HomeWidget({Key? key}) : super(key: key);
 
   @override
-  _HomeNovaWidgetState createState() => _HomeNovaWidgetState();
+  _HomeWidgetState createState() => _HomeWidgetState();
 }
 
-class _HomeNovaWidgetState extends State<HomeNovaWidget> {
-  late HomeNovaModel _model;
+class _HomeWidgetState extends State<HomeWidget> {
+  late HomeModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => HomeNovaModel());
+    _model = createModel(context, () => HomeModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
