@@ -18,7 +18,7 @@ Projeto para automação de envios de mensagens via API.
 
 ### Desenvolvido por
 
-- Gabriel de Souza
+- [![Github Badge](https://img.shields.io/badge/-Gabriel%20Souza-6633cc?style=flat-square&logo=Github&logoColor=white&link=https://github.com/gabrielsouza123/)](https://github.com/gabrielsouza123) 
 - Irina Bittencourt
 - [![Github Badge](https://img.shields.io/badge/-Wincius%20Castanha-6633cc?style=flat-square&logo=Github&logoColor=white&link=https://github.com/winiicastanha/)](https://github.com/winiicastanha) |  [![Linkedin Badge](https://img.shields.io/badge/-Wincius%20Castanha-6633cc?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/winiciuscastanha//)](https://www.linkedin.com/in/winiciuscastanha/)
 
