@@ -26,6 +26,7 @@ class _RecuperacaoSenhaWidgetState extends State<RecuperacaoSenhaWidget> {
     _model = createModel(context, () => RecuperacaoSenhaModel());
 
     _model.textFieldEmailController ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

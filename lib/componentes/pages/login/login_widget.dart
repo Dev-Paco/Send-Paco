@@ -27,6 +27,7 @@ class _LoginWidgetState extends State<LoginWidget> {
 
     _model.textFieldEmailController ??= TextEditingController();
     _model.textFieldSenhaController ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

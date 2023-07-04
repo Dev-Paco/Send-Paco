@@ -24,6 +24,8 @@ class _RecuperacaoSenhaMsgWidgetState extends State<RecuperacaoSenhaMsgWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => RecuperacaoSenhaMsgModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

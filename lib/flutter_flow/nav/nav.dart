@@ -70,6 +70,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'CriarTemplate',
           path: '/criarTemplate',
           builder: (context, params) => CriarTemplateWidget(),
+        ),
+        FFRoute(
+          name: 'Campanhas',
+          path: '/campanhas',
+          builder: (context, params) => CampanhasWidget(),
+        ),
+        FFRoute(
+          name: 'Templates',
+          path: '/templates',
+          builder: (context, params) => TemplatesWidget(),
+        ),
+        FFRoute(
+          name: 'CriarCamapanha',
+          path: '/criarCamapanha',
+          builder: (context, params) => CriarCamapanhaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

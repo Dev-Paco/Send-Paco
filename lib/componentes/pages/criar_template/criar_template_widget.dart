@@ -30,6 +30,7 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
 
     _model.textController1 ??= TextEditingController();
     _model.textController2 ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -85,121 +86,131 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Flexible(
-                              child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    160.0, 0.0, 160.0, 0.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Flexible(
-                                      child: Container(
-                                        width: double.infinity,
-                                        height: 89.0,
-                                        decoration: BoxDecoration(
-                                          color: Color(0xFFDAE7F6),
-                                          borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(0.0),
-                                            bottomRight: Radius.circular(0.0),
-                                            topLeft: Radius.circular(12.0),
-                                            topRight: Radius.circular(12.0),
-                                          ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  160.0, 0.0, 160.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Flexible(
+                                    child: Container(
+                                      width: double.infinity,
+                                      height: 89.0,
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFFDAE7F6),
+                                        borderRadius: BorderRadius.only(
+                                          bottomLeft: Radius.circular(0.0),
+                                          bottomRight: Radius.circular(0.0),
+                                          topLeft: Radius.circular(12.0),
+                                          topRight: Radius.circular(12.0),
                                         ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 0.0, 24.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Container(
-                                                    width: 40.0,
-                                                    height: 40.0,
-                                                    decoration: BoxDecoration(
-                                                      color: Colors.white,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                      border: Border.all(
-                                                        color:
-                                                            Color(0x00C30064),
-                                                      ),
-                                                    ),
-                                                    child: ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                      child: SvgPicture.asset(
-                                                        'assets/images/Frame.svg',
-                                                        width: 300.0,
-                                                        height: 200.0,
-                                                        fit: BoxFit.cover,
-                                                      ),
+                                      ),
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            24.0, 0.0, 24.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Container(
+                                                  width: 40.0,
+                                                  height: 40.0,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.white,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    border: Border.all(
+                                                      color: Color(0x00C30064),
                                                     ),
                                                   ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(16.0,
-                                                                20.0, 0.0, 0.0),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          'Templates de mensagens',
-                                                          textAlign:
-                                                              TextAlign.start,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Axiforma',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .pacoDark,
-                                                                fontSize: 20.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
-                                                        ),
-                                                        Text(
-                                                          'Crie, gerencie e automatize suas mensagens! ',
-                                                          textAlign:
-                                                              TextAlign.start,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Axiforma',
-                                                                fontSize: 12.0,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
-                                                        ),
-                                                      ],
+                                                  child: ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: SvgPicture.asset(
+                                                      'assets/images/Frame.svg',
+                                                      width: 300.0,
+                                                      height: 200.0,
+                                                      fit: BoxFit.cover,
                                                     ),
                                                   ),
-                                                ],
-                                              ),
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  ClipRRect(
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          16.0, 20.0, 0.0, 0.0),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        'Templates de mensagens',
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Axiforma',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .pacoDark,
+                                                                  fontSize:
+                                                                      20.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                      Text(
+                                                        'Crie, gerencie e automatize suas mensagens! ',
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Axiforma',
+                                                              fontSize: 12.0,
+                                                              useGoogleFonts:
+                                                                  false,
+                                                            ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    context.safePop();
+                                                  },
+                                                  child: ClipRRect(
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             8.0),
@@ -210,15 +221,15 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                       fit: BoxFit.cover,
                                                     ),
                                                   ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -342,7 +353,11 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                               .dropDownValueController ??=
                                                           FormFieldController<
                                                               String>(null),
-                                                      options: ['Option 1'],
+                                                      options: [
+                                                        'E-mail',
+                                                        'SMS',
+                                                        'Whatsapp'
+                                                      ],
                                                       onChanged: (val) =>
                                                           setState(() => _model
                                                                   .dropDownValue =
@@ -395,7 +410,6 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                         child: TextFormField(
                                                           controller: _model
                                                               .textController1,
-                                                          autofocus: true,
                                                           obscureText: false,
                                                           decoration:
                                                               InputDecoration(
@@ -436,7 +450,7 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                                   BorderSide(
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primary,
+                                                                    .rosaBTN,
                                                                 width: 1.0,
                                                               ),
                                                               borderRadius:
@@ -496,7 +510,6 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                         child: TextFormField(
                                                           controller: _model
                                                               .textController2,
-                                                          autofocus: true,
                                                           obscureText: false,
                                                           decoration:
                                                               InputDecoration(
@@ -537,7 +550,7 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                                   BorderSide(
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primary,
+                                                                    .rosaBTN,
                                                                 width: 1.0,
                                                               ),
                                                               borderRadius:
@@ -577,6 +590,7 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                           style: FlutterFlowTheme
                                                                   .of(context)
                                                               .bodyMedium,
+                                                          maxLines: null,
                                                           validator: _model
                                                               .textController2Validator
                                                               .asValidator(
@@ -597,17 +611,15 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    Expanded(
-                                                      child: ClipRRect(
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
-                                                        child: Image.asset(
-                                                          'assets/images/Apple_iPhone_X_Silver.png',
-                                                          width: 300.0,
-                                                          height: 200.0,
-                                                          fit: BoxFit.contain,
-                                                        ),
+                                                    ClipRRect(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              8.0),
+                                                      child: Image.asset(
+                                                        'assets/images/Apple_iPhone_X_Silver.png',
+                                                        width: 300.0,
+                                                        height: 320.0,
+                                                        fit: BoxFit.contain,
                                                       ),
                                                     ),
                                                   ],
@@ -685,8 +697,8 @@ class _CriarTemplateWidgetState extends State<CriarTemplateWidget> {
                                                     .fromSTEB(
                                                         48.0, 0.0, 0.0, 0.0),
                                                 child: FFButtonWidget(
-                                                  onPressed: () {
-                                                    print('Button pressed ...');
+                                                  onPressed: () async {
+                                                    context.safePop();
                                                   },
                                                   text: 'Cancelar',
                                                   options: FFButtonOptions(

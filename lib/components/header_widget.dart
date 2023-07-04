@@ -35,6 +35,8 @@ class _HeaderWidgetState extends State<HeaderWidget> {
         _model.menuOn = false;
       });
     });
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -53,86 +55,82 @@ class _HeaderWidgetState extends State<HeaderWidget> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                height: 56.0,
-                constraints: BoxConstraints(
-                  maxWidth: MediaQuery.sizeOf(context).width * 1.0,
-                ),
-                decoration: BoxDecoration(
-                  color: Color(0xFFC30064),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Flexible(
-                      child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
+            Container(
+              width: double.infinity,
+              height: 56.0,
+              constraints: BoxConstraints(
+                maxWidth: MediaQuery.sizeOf(context).width * 1.0,
+              ),
+              decoration: BoxDecoration(
+                color: Color(0xFFC30064),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Align(
+                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          setState(() {
+                            _model.menuOn = false;
+                          });
+
+                          context.pushNamed('Home');
+                        },
+                        child: Icon(
+                          Icons.home,
+                          color: Color(0xFFF7F8FD),
+                          size: 22.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: SvgPicture.asset(
+                        'assets/images/Group_(3).svg',
+                        width: 190.0,
+                        height: 20.0,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    child: Align(
+                      alignment: AlignmentDirectional(1.0, 0.0),
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          if (_model.menuOn!) {
                             setState(() {
                               _model.menuOn = false;
                             });
-
-                            context.pushNamed('Home');
-                          },
-                          child: Icon(
-                            Icons.home,
-                            color: Color(0xFFF7F8FD),
-                            size: 22.0,
-                          ),
+                          } else {
+                            setState(() {
+                              _model.menuOn = true;
+                            });
+                          }
+                        },
+                        child: Icon(
+                          Icons.menu,
+                          color: Color(0xFFF7F8FD),
+                          size: 24.0,
                         ),
                       ),
                     ),
-                    Flexible(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: SvgPicture.asset(
-                          'assets/images/Group_(3).svg',
-                          width: 190.0,
-                          height: 20.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Flexible(
-                      child: Align(
-                        alignment: AlignmentDirectional(1.0, 0.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            if (_model.menuOn!) {
-                              setState(() {
-                                _model.menuOn = false;
-                              });
-                            } else {
-                              setState(() {
-                                _model.menuOn = true;
-                              });
-                            }
-                          },
-                          child: Icon(
-                            Icons.menu,
-                            color: Color(0xFFF7F8FD),
-                            size: 24.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ]
-                      .divide(SizedBox(width: 160.0))
-                      .around(SizedBox(width: 160.0)),
-                ),
+                  ),
+                ].divide(SizedBox(width: 160.0)).around(SizedBox(width: 160.0)),
               ),
             ),
           ],
@@ -212,11 +210,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        setState(() {
-                          _model.menuOn = false;
-                        });
-
-                        context.pushNamed('null');
+                        context.pushNamed('Templates');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
