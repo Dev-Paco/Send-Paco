@@ -160,11 +160,19 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
+                        context.pushNamed(
+                          'Home',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
+
                         setState(() {
                           _model.menuOn = false;
                         });
-
-                        context.pushNamed('Home');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -177,7 +185,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                               color: Color(0x00FFFFFF),
                               borderRadius: BorderRadius.circular(8.0),
                               border: Border.all(
-                                color: FlutterFlowTheme.of(context).rosaBTN,
+                                color: Color(0xFFC8C8C8),
                               ),
                             ),
                             child: ClipRRect(
@@ -210,11 +218,19 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
+                        context.pushNamed(
+                          'Templates',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
+
                         setState(() {
                           _model.menuOn = false;
                         });
-
-                        context.pushNamed('Templates');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -260,11 +276,19 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
+                        context.pushNamed(
+                          'Campanhas',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
+
                         setState(() {
                           _model.menuOn = false;
                         });
-
-                        context.pushNamed('Campanhas');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -310,11 +334,19 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
+                        context.pushNamed(
+                          'Contatos',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
+
                         setState(() {
                           _model.menuOn = false;
                         });
-
-                        context.pushNamed('Campanhas');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -360,11 +392,19 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
+                        context.pushNamed(
+                          'Grupos',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
+
                         setState(() {
                           _model.menuOn = false;
                         });
-
-                        context.pushNamed('Canais');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -410,11 +450,19 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
+                        context.pushNamed(
+                          'Canais',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
+
                         setState(() {
                           _model.menuOn = false;
                         });
-
-                        context.pushNamed('Contatos');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -460,11 +508,19 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
+                        context.pushNamed(
+                          'Usuarios',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
+
                         setState(() {
                           _model.menuOn = false;
                         });
-
-                        context.pushNamed('Canais');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -491,7 +547,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                             ),
                           ),
                           Text(
-                            'Ususários',
+                            'Usuários',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -510,11 +566,19 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
+                        context.pushNamed(
+                          'Empresas',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
+
                         setState(() {
                           _model.menuOn = false;
                         });
-
-                        context.pushNamed('Empresas');
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.max,

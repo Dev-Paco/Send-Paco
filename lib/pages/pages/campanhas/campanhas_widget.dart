@@ -1,8 +1,9 @@
+import '/componentes/excluir/excluir_campanha/excluir_campanha_widget.dart';
 import '/componentes/header/header_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/random_data_util.dart' as random_data;
+import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -357,66 +358,51 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                         ],
                                                                       ),
                                                                     ),
-                                                                    Row(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .min,
-                                                                      mainAxisAlignment:
-                                                                          MainAxisAlignment
-                                                                              .end,
-                                                                      children: [
-                                                                        FFButtonWidget(
-                                                                          onPressed:
-                                                                              () async {
-                                                                            context.pushNamed('CriarCampanhas');
-                                                                          },
-                                                                          text:
-                                                                              'Nova Campanha',
-                                                                          icon:
-                                                                              Icon(
-                                                                            Icons.add,
-                                                                            color:
-                                                                                Color(0xFFE1E5EB),
-                                                                            size:
-                                                                                14.0,
-                                                                          ),
-                                                                          options:
-                                                                              FFButtonOptions(
-                                                                            width:
-                                                                                154.0,
-                                                                            height:
-                                                                                46.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                0.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                0.0,
-                                                                                0.0,
-                                                                                3.0),
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).rosaBTN,
-                                                                            textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Axiforma',
-                                                                                  color: Color(0xFFE1E5EB),
-                                                                                  fontSize: 12.0,
-                                                                                  fontWeight: FontWeight.bold,
-                                                                                  useGoogleFonts: false,
-                                                                                ),
-                                                                            elevation:
-                                                                                3.0,
-                                                                            borderSide:
-                                                                                BorderSide(
-                                                                              color: Colors.transparent,
-                                                                              width: 1.0,
+                                                                    Flexible(
+                                                                      child:
+                                                                          Row(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.min,
+                                                                        mainAxisAlignment:
+                                                                            MainAxisAlignment.end,
+                                                                        children: [
+                                                                          FFButtonWidget(
+                                                                            onPressed:
+                                                                                () async {
+                                                                              context.pushNamed('CriarCampanhas');
+                                                                            },
+                                                                            text:
+                                                                                'Nova Campanha',
+                                                                            icon:
+                                                                                Icon(
+                                                                              Icons.add,
+                                                                              color: Color(0xFFE1E5EB),
+                                                                              size: 14.0,
                                                                             ),
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(30.0),
+                                                                            options:
+                                                                                FFButtonOptions(
+                                                                              width: 154.0,
+                                                                              height: 46.0,
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 3.0),
+                                                                              color: FlutterFlowTheme.of(context).rosaBTN,
+                                                                              textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    fontFamily: 'Axiforma',
+                                                                                    color: Color(0xFFE1E5EB),
+                                                                                    fontSize: 12.0,
+                                                                                    fontWeight: FontWeight.bold,
+                                                                                    useGoogleFonts: false,
+                                                                                  ),
+                                                                              elevation: 3.0,
+                                                                              borderSide: BorderSide(
+                                                                                color: Colors.transparent,
+                                                                                width: 1.0,
+                                                                              ),
+                                                                              borderRadius: BorderRadius.circular(30.0),
+                                                                            ),
                                                                           ),
-                                                                        ),
-                                                                      ],
+                                                                        ],
+                                                                      ),
                                                                     ),
                                                                   ].divide(SizedBox(
                                                                       width:
@@ -568,23 +554,29 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                         MainAxisAlignment
                                                                             .start,
                                                                     children: [
-                                                                      Text(
-                                                                        'Título',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Axiforma',
-                                                                              color: FlutterFlowTheme.of(context).pacoDark,
-                                                                              useGoogleFonts: false,
-                                                                            ),
+                                                                      Flexible(
+                                                                        child:
+                                                                            Text(
+                                                                          'Título',
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .override(
+                                                                                fontFamily: 'Axiforma',
+                                                                                color: FlutterFlowTheme.of(context).pacoDark,
+                                                                                useGoogleFonts: false,
+                                                                              ),
+                                                                        ),
                                                                       ),
-                                                                      Icon(
-                                                                        Icons
-                                                                            .arrow_drop_up,
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .pacoDark,
-                                                                        size:
-                                                                            24.0,
+                                                                      Flexible(
+                                                                        child:
+                                                                            Icon(
+                                                                          Icons
+                                                                              .arrow_drop_up,
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).pacoDark,
+                                                                          size:
+                                                                              24.0,
+                                                                        ),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -608,19 +600,18 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                       MainAxisAlignment
                                                                           .center,
                                                                   children: [
-                                                                    Text(
-                                                                      'Midia',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Axiforma',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).pacoDark,
-                                                                            useGoogleFonts:
-                                                                                false,
-                                                                          ),
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
+                                                                        'Midia',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Axiforma',
+                                                                              color: FlutterFlowTheme.of(context).pacoDark,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
@@ -643,19 +634,18 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                       MainAxisAlignment
                                                                           .center,
                                                                   children: [
-                                                                    Text(
-                                                                      'Canal',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Axiforma',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).pacoDark,
-                                                                            useGoogleFonts:
-                                                                                false,
-                                                                          ),
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
+                                                                        'Canal',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Axiforma',
+                                                                              color: FlutterFlowTheme.of(context).pacoDark,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
@@ -678,19 +668,18 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                       MainAxisAlignment
                                                                           .center,
                                                                   children: [
-                                                                    Text(
-                                                                      'Template',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Axiforma',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).pacoDark,
-                                                                            useGoogleFonts:
-                                                                                false,
-                                                                          ),
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
+                                                                        'Template',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Axiforma',
+                                                                              color: FlutterFlowTheme.of(context).pacoDark,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
@@ -713,19 +702,18 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                       MainAxisAlignment
                                                                           .center,
                                                                   children: [
-                                                                    Text(
-                                                                      'Grupo',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Axiforma',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).pacoDark,
-                                                                            useGoogleFonts:
-                                                                                false,
-                                                                          ),
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
+                                                                        'Grupo',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Axiforma',
+                                                                              color: FlutterFlowTheme.of(context).pacoDark,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
@@ -748,19 +736,18 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                       MainAxisAlignment
                                                                           .center,
                                                                   children: [
-                                                                    Text(
-                                                                      'Ususário',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Axiforma',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).pacoDark,
-                                                                            useGoogleFonts:
-                                                                                false,
-                                                                          ),
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
+                                                                        'Ususário',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Axiforma',
+                                                                              color: FlutterFlowTheme.of(context).pacoDark,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
@@ -783,19 +770,18 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                       MainAxisAlignment
                                                                           .center,
                                                                   children: [
-                                                                    Text(
-                                                                      'Status',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Axiforma',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).pacoDark,
-                                                                            useGoogleFonts:
-                                                                                false,
-                                                                          ),
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
+                                                                        'Status',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Axiforma',
+                                                                              color: FlutterFlowTheme.of(context).pacoDark,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
@@ -818,19 +804,18 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                       MainAxisAlignment
                                                                           .center,
                                                                   children: [
-                                                                    Text(
-                                                                      'Ação',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Axiforma',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).pacoDark,
-                                                                            useGoogleFonts:
-                                                                                false,
-                                                                          ),
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
+                                                                        'Ação',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium
+                                                                            .override(
+                                                                              fontFamily: 'Axiforma',
+                                                                              color: FlutterFlowTheme.of(context).pacoDark,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                      ),
                                                                     ),
                                                                   ],
                                                                 ),
@@ -854,235 +839,69 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                           context)
                                                       .secondaryBackground,
                                                 ),
-                                                child: Builder(
-                                                  builder: (context) {
-                                                    final test = List.generate(
-                                                        random_data
-                                                            .randomInteger(
-                                                                0, 0),
-                                                        (index) => random_data
-                                                            .randomInteger(0,
-                                                                100)).toList();
-                                                    return ListView.separated(
-                                                      padding: EdgeInsets.zero,
-                                                      scrollDirection:
-                                                          Axis.vertical,
-                                                      itemCount: test.length,
-                                                      separatorBuilder: (_,
-                                                              __) =>
-                                                          SizedBox(height: 5.0),
-                                                      itemBuilder:
-                                                          (context, testIndex) {
-                                                        final testItem =
-                                                            test[testIndex];
-                                                        return Container(
-                                                          width:
-                                                              double.infinity,
-                                                          height: 80.0,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                          child: Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Flexible(
-                                                                child:
-                                                                    Container(
-                                                                  width: 200.0,
-                                                                  height: 64.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: Color(
-                                                                        0x00FFFFFF),
-                                                                  ),
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                child: ListView(
+                                                  padding: EdgeInsets.zero,
+                                                  scrollDirection:
+                                                      Axis.vertical,
+                                                  children: [
+                                                    Container(
+                                                      width: double.infinity,
+                                                      height: 80.0,
+                                                      decoration: BoxDecoration(
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Flexible(
+                                                            child: Container(
+                                                              width: 200.0,
+                                                              height: 64.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x00FFFFFF),
+                                                              ),
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                    child:
-                                                                        Column(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      mainAxisAlignment:
-                                                                          MainAxisAlignment
-                                                                              .start,
-                                                                      crossAxisAlignment:
-                                                                          CrossAxisAlignment
-                                                                              .start,
-                                                                      children: [
-                                                                        Text(
-                                                                          'Novidades',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: 'Axiforma',
-                                                                                color: FlutterFlowTheme.of(context).pacoDark,
-                                                                                fontSize: 14.0,
-                                                                                useGoogleFonts: false,
-                                                                              ),
-                                                                        ),
-                                                                        Text(
-                                                                          'Criado em : 29/05/2023 10:54',
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: 'Axiforma',
-                                                                                color: Color(0xFF6C757D),
-                                                                                fontSize: 12.0,
-                                                                                useGoogleFonts: false,
-                                                                              ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Expanded(
-                                                                child:
-                                                                    Container(
-                                                                  width: 100.0,
-                                                                  height: 64.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: Color(
-                                                                        0x00FFFFFF),
-                                                                  ),
-                                                                  child: Column(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
-                                                                    crossAxisAlignment:
-                                                                        CrossAxisAlignment
-                                                                            .center,
-                                                                    children: [
-                                                                      ClipRRect(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                        child: SvgPicture
-                                                                            .asset(
-                                                                          'assets/images/Frame_(5).svg',
-                                                                          width:
-                                                                              24.0,
-                                                                          height:
-                                                                              24.0,
-                                                                          fit: BoxFit
-                                                                              .cover,
-                                                                        ),
-                                                                      ),
-                                                                      Text(
-                                                                        'WhatsApp',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Axiforma',
-                                                                              fontSize: 10.0,
-                                                                              useGoogleFonts: false,
-                                                                            ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Expanded(
-                                                                child:
-                                                                    Container(
-                                                                  width: 100.0,
-                                                                  height: 64.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: Color(
-                                                                        0x00FFFFFF),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
-                                                                    children: [
-                                                                      Text(
-                                                                        'Canal',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Axiforma',
-                                                                              color: FlutterFlowTheme.of(context).pacoDark,
-                                                                              useGoogleFonts: false,
-                                                                            ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Expanded(
-                                                                child:
-                                                                    Container(
-                                                                  width: 170.0,
-                                                                  height: 64.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: Color(
-                                                                        0x00FFFFFF),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
-                                                                    children: [
-                                                                      Text(
+                                                                child: Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .start,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
                                                                         'Novidades',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
                                                                               fontFamily: 'Axiforma',
                                                                               color: FlutterFlowTheme.of(context).pacoDark,
-                                                                              fontSize: 12.0,
+                                                                              fontSize: 14.0,
                                                                               useGoogleFonts: false,
                                                                             ),
                                                                       ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Expanded(
-                                                                child:
-                                                                    Container(
-                                                                  width: 120.0,
-                                                                  height: 64.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: Color(
-                                                                        0x00FFFFFF),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
-                                                                    children: [
-                                                                      Text(
-                                                                        'Grupo de \ncontatos',
-                                                                        textAlign:
-                                                                            TextAlign.center,
+                                                                    ),
+                                                                    Flexible(
+                                                                      child:
+                                                                          Text(
+                                                                        'Criado em : 29/05/2023 10:54',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
@@ -1092,152 +911,394 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                               useGoogleFonts: false,
                                                                             ),
                                                                       ),
-                                                                    ],
-                                                                  ),
+                                                                    ),
+                                                                  ],
                                                                 ),
                                                               ),
-                                                              Expanded(
-                                                                child:
-                                                                    Container(
-                                                                  width: 120.0,
-                                                                  height: 64.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: Color(
-                                                                        0x00FFFFFF),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
-                                                                    children: [
-                                                                      Text(
-                                                                        'Danilo\nFale Paco',
-                                                                        textAlign:
-                                                                            TextAlign.center,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Axiforma',
-                                                                              color: Color(0xFF6C757D),
-                                                                              fontSize: 12.0,
-                                                                              useGoogleFonts: false,
-                                                                            ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Expanded(
-                                                                child:
-                                                                    Container(
-                                                                  width: 120.0,
-                                                                  height: 64.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: Color(
-                                                                        0x00FFFFFF),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
-                                                                    children: [
-                                                                      Text(
-                                                                        'Salva\n30/05/2023\n11:00',
-                                                                        textAlign:
-                                                                            TextAlign.center,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Axiforma',
-                                                                              color: Color(0xFF6C757D),
-                                                                              fontSize: 10.0,
-                                                                              useGoogleFonts: false,
-                                                                            ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Expanded(
-                                                                child:
-                                                                    Container(
-                                                                  width: 120.0,
-                                                                  height: 64.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    color: Color(
-                                                                        0x00FFFFFF),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .center,
-                                                                    children: [
-                                                                      ClipRRect(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                        child: SvgPicture
-                                                                            .asset(
-                                                                          'assets/images/Frame_(2).svg',
-                                                                          width:
-                                                                              24.0,
-                                                                          height:
-                                                                              24.0,
-                                                                          fit: BoxFit
-                                                                              .cover,
-                                                                        ),
-                                                                      ),
-                                                                      ClipRRect(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                        child: SvgPicture
-                                                                            .asset(
-                                                                          'assets/images/Frame_(3).svg',
-                                                                          width:
-                                                                              24.0,
-                                                                          height:
-                                                                              24.0,
-                                                                          fit: BoxFit
-                                                                              .cover,
-                                                                        ),
-                                                                      ),
-                                                                      ClipRRect(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                        child: SvgPicture
-                                                                            .asset(
-                                                                          'assets/images/Frame_(4).svg',
-                                                                          width:
-                                                                              24.0,
-                                                                          height:
-                                                                              24.0,
-                                                                          fit: BoxFit
-                                                                              .cover,
-                                                                        ),
-                                                                      ),
-                                                                    ].divide(SizedBox(
-                                                                        width:
-                                                                            16.0)),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
+                                                            ),
                                                           ),
-                                                        );
-                                                      },
-                                                    );
-                                                  },
+                                                          Expanded(
+                                                            child: Container(
+                                                              width: 100.0,
+                                                              height: 64.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x00FFFFFF),
+                                                              ),
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child:
+                                                                        ClipRRect(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              8.0),
+                                                                      child: SvgPicture
+                                                                          .asset(
+                                                                        'assets/images/Frame_(5).svg',
+                                                                        width:
+                                                                            24.0,
+                                                                        height:
+                                                                            24.0,
+                                                                        fit: BoxFit
+                                                                            .cover,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child: Text(
+                                                                      'WhatsApp',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Axiforma',
+                                                                            fontSize:
+                                                                                10.0,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Container(
+                                                              width: 100.0,
+                                                              height: 64.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x00FFFFFF),
+                                                              ),
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child: Text(
+                                                                      'Canal',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Axiforma',
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).pacoDark,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Container(
+                                                              width: 170.0,
+                                                              height: 64.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x00FFFFFF),
+                                                              ),
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child: Text(
+                                                                      'Novidades',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Axiforma',
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).pacoDark,
+                                                                            fontSize:
+                                                                                12.0,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Container(
+                                                              width: 120.0,
+                                                              height: 64.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x00FFFFFF),
+                                                              ),
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child: Text(
+                                                                      'Grupo de \ncontatos',
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Axiforma',
+                                                                            color:
+                                                                                Color(0xFF6C757D),
+                                                                            fontSize:
+                                                                                12.0,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Container(
+                                                              width: 120.0,
+                                                              height: 64.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x00FFFFFF),
+                                                              ),
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child: Text(
+                                                                      'Danilo\nFale Paco',
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Axiforma',
+                                                                            color:
+                                                                                Color(0xFF6C757D),
+                                                                            fontSize:
+                                                                                12.0,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Container(
+                                                              width: 120.0,
+                                                              height: 64.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x00FFFFFF),
+                                                              ),
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child: Text(
+                                                                      'Salva\n30/05/2023\n11:00',
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Axiforma',
+                                                                            color:
+                                                                                Color(0xFF6C757D),
+                                                                            fontSize:
+                                                                                10.0,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Container(
+                                                              width: 120.0,
+                                                              height: 64.0,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0x00FFFFFF),
+                                                              ),
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child:
+                                                                        ClipRRect(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              8.0),
+                                                                      child: SvgPicture
+                                                                          .asset(
+                                                                        'assets/images/Frame_(2).svg',
+                                                                        width:
+                                                                            24.0,
+                                                                        height:
+                                                                            24.0,
+                                                                        fit: BoxFit
+                                                                            .cover,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child:
+                                                                        ClipRRect(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              8.0),
+                                                                      child: SvgPicture
+                                                                          .asset(
+                                                                        'assets/images/Frame_(3).svg',
+                                                                        width:
+                                                                            24.0,
+                                                                        height:
+                                                                            24.0,
+                                                                        fit: BoxFit
+                                                                            .cover,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child:
+                                                                        Builder(
+                                                                      builder:
+                                                                          (context) =>
+                                                                              InkWell(
+                                                                        splashColor:
+                                                                            Colors.transparent,
+                                                                        focusColor:
+                                                                            Colors.transparent,
+                                                                        hoverColor:
+                                                                            Colors.transparent,
+                                                                        highlightColor:
+                                                                            Colors.transparent,
+                                                                        onTap:
+                                                                            () async {
+                                                                          await showAlignedDialog(
+                                                                            context:
+                                                                                context,
+                                                                            isGlobal:
+                                                                                true,
+                                                                            avoidOverflow:
+                                                                                false,
+                                                                            targetAnchor:
+                                                                                AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                            followerAnchor:
+                                                                                AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                            builder:
+                                                                                (dialogContext) {
+                                                                              return Material(
+                                                                                color: Colors.transparent,
+                                                                                child: GestureDetector(
+                                                                                  onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
+                                                                                  child: ExcluirCampanhaWidget(),
+                                                                                ),
+                                                                              );
+                                                                            },
+                                                                          ).then((value) =>
+                                                                              setState(() {}));
+                                                                        },
+                                                                        child:
+                                                                            ClipRRect(
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                          child:
+                                                                              SvgPicture.asset(
+                                                                            'assets/images/Frame_(4).svg',
+                                                                            width:
+                                                                                24.0,
+                                                                            height:
+                                                                                24.0,
+                                                                            fit:
+                                                                                BoxFit.cover,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ].divide(SizedBox(
+                                                                    width:
+                                                                        16.0)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ].divide(
+                                                      SizedBox(height: 5.0)),
                                                 ),
                                               ),
                                             ),
@@ -1294,11 +1355,13 @@ class _CampanhasWidgetState extends State<CampanhasWidget> {
                                                                   MainAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Text(
-                                                                  'Mostrando 6 de 50',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
+                                                                Flexible(
+                                                                  child: Text(
+                                                                    'Mostrando 6 de 50',
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium,
+                                                                  ),
                                                                 ),
                                                               ],
                                                             ),

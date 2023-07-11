@@ -210,42 +210,47 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          16.0,
-                                                                          20.0,
-                                                                          0.0,
-                                                                          0.0),
+                                                                    Flexible(
                                                                       child:
-                                                                          Column(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        crossAxisAlignment:
-                                                                            CrossAxisAlignment.start,
-                                                                        children: [
-                                                                          Text(
-                                                                            'Campanhas',
-                                                                            textAlign:
-                                                                                TextAlign.start,
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Axiforma',
-                                                                                  color: FlutterFlowTheme.of(context).pacoDark,
-                                                                                  fontSize: 20.0,
-                                                                                  fontWeight: FontWeight.w500,
-                                                                                  useGoogleFonts: false,
-                                                                                ),
-                                                                          ),
-                                                                          Text(
-                                                                            'Envie mensagens em massa para a sua lista de contato',
-                                                                            textAlign:
-                                                                                TextAlign.start,
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Axiforma',
-                                                                                  fontSize: 12.0,
-                                                                                  useGoogleFonts: false,
-                                                                                ),
-                                                                          ),
-                                                                        ],
+                                                                          Padding(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            16.0,
+                                                                            20.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                        child:
+                                                                            Column(
+                                                                          mainAxisSize:
+                                                                              MainAxisSize.max,
+                                                                          crossAxisAlignment:
+                                                                              CrossAxisAlignment.start,
+                                                                          children: [
+                                                                            Flexible(
+                                                                              child: Text(
+                                                                                'Campanha de mensagens',
+                                                                                textAlign: TextAlign.start,
+                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                      fontFamily: 'Axiforma',
+                                                                                      color: FlutterFlowTheme.of(context).pacoDark,
+                                                                                      fontSize: 20.0,
+                                                                                      fontWeight: FontWeight.w500,
+                                                                                      useGoogleFonts: false,
+                                                                                    ),
+                                                                              ),
+                                                                            ),
+                                                                            Flexible(
+                                                                              child: Text(
+                                                                                'Envie mensagens em massa para a sua lista de contatos!',
+                                                                                textAlign: TextAlign.start,
+                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                      fontFamily: 'Axiforma',
+                                                                                      fontSize: 12.0,
+                                                                                      useGoogleFonts: false,
+                                                                                    ),
+                                                                              ),
+                                                                            ),
+                                                                          ],
+                                                                        ),
                                                                       ),
                                                                     ),
                                                                   ],
@@ -335,7 +340,7 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                   .stretch,
                                                           children: [
                                                             Text(
-                                                              'Novo template',
+                                                              'Nova campanha',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -360,384 +365,33 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                         ),
                                                       ),
                                                       Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      5.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .start,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Flexible(
-                                                                child:
-                                                                    SingleChildScrollView(
-                                                                  child: Column(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    crossAxisAlignment:
-                                                                        CrossAxisAlignment
-                                                                            .start,
-                                                                    children: [
-                                                                      Flexible(
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              20.0),
-                                                                          child:
-                                                                              Text(
-                                                                            'Preencha o formulário abaixo',
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Axiforma',
-                                                                                  fontSize: 16.0,
-                                                                                  fontWeight: FontWeight.w500,
-                                                                                  useGoogleFonts: false,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        width:
-                                                                            320.0,
-                                                                        child:
-                                                                            TextFormField(
-                                                                          controller:
-                                                                              _model.textController1,
-                                                                          obscureText:
-                                                                              false,
-                                                                          decoration:
-                                                                              InputDecoration(
-                                                                            labelText:
-                                                                                'Nome da campanha',
-                                                                            labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                  fontFamily: 'Axiforma',
-                                                                                  color: Color(0xFF14181B),
-                                                                                  useGoogleFonts: false,
-                                                                                ),
-                                                                            hintText:
-                                                                                'Nome da campanha',
-                                                                            hintStyle:
-                                                                                FlutterFlowTheme.of(context).labelMedium,
-                                                                            enabledBorder:
-                                                                                OutlineInputBorder(
-                                                                              borderSide: BorderSide(
-                                                                                color: Color(0xFFB3B8C1),
-                                                                                width: 1.0,
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(12.0),
-                                                                            ),
-                                                                            focusedBorder:
-                                                                                OutlineInputBorder(
-                                                                              borderSide: BorderSide(
-                                                                                color: FlutterFlowTheme.of(context).rosaBTN,
-                                                                                width: 1.0,
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(12.0),
-                                                                            ),
-                                                                            errorBorder:
-                                                                                OutlineInputBorder(
-                                                                              borderSide: BorderSide(
-                                                                                color: FlutterFlowTheme.of(context).error,
-                                                                                width: 1.0,
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(12.0),
-                                                                            ),
-                                                                            focusedErrorBorder:
-                                                                                OutlineInputBorder(
-                                                                              borderSide: BorderSide(
-                                                                                color: FlutterFlowTheme.of(context).error,
-                                                                                width: 1.0,
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(12.0),
-                                                                            ),
-                                                                          ),
-                                                                          style:
-                                                                              FlutterFlowTheme.of(context).bodyMedium,
-                                                                          validator: _model
-                                                                              .textController1Validator
-                                                                              .asValidator(context),
-                                                                        ),
-                                                                      ),
-                                                                      Container(
-                                                                        width:
-                                                                            200.0,
-                                                                        decoration:
-                                                                            BoxDecoration(),
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            10.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child: FlutterFlowDropDown<
-                                                                            String>(
-                                                                          controller: _model.dropDownValueController1 ??=
-                                                                              FormFieldController<String>(null),
-                                                                          options: [
-                                                                            'E-mail',
-                                                                            'SMS',
-                                                                            'Whatsapp'
-                                                                          ],
-                                                                          onChanged: (val) =>
-                                                                              setState(() => _model.dropDownValue1 = val),
-                                                                          width:
-                                                                              320.0,
-                                                                          height:
-                                                                              50.0,
-                                                                          textStyle: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: 'Axiforma',
-                                                                                color: Color(0xFF323C47),
-                                                                                useGoogleFonts: false,
-                                                                              ),
-                                                                          hintText:
-                                                                              'Selecionar Mídia',
-                                                                          icon:
-                                                                              Icon(
-                                                                            Icons.keyboard_arrow_down_rounded,
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                            size:
-                                                                                24.0,
-                                                                          ),
-                                                                          fillColor:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                          elevation:
-                                                                              1.0,
-                                                                          borderColor:
-                                                                              Color(0xFFB3B8C1),
-                                                                          borderWidth:
-                                                                              1.0,
-                                                                          borderRadius:
-                                                                              12.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
-                                                                              16.0,
-                                                                              4.0,
-                                                                              16.0,
-                                                                              4.0),
-                                                                          hidesUnderline:
-                                                                              true,
-                                                                          isSearchable:
-                                                                              false,
-                                                                        ),
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            10.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child: FlutterFlowDropDown<
-                                                                            String>(
-                                                                          controller: _model.dropDownValueController2 ??=
-                                                                              FormFieldController<String>(null),
-                                                                          options: [
-                                                                            'E-mail',
-                                                                            'SMS',
-                                                                            'Whatsapp'
-                                                                          ],
-                                                                          onChanged: (val) =>
-                                                                              setState(() => _model.dropDownValue2 = val),
-                                                                          width:
-                                                                              320.0,
-                                                                          height:
-                                                                              50.0,
-                                                                          textStyle: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: 'Axiforma',
-                                                                                color: Color(0xFF323C47),
-                                                                                useGoogleFonts: false,
-                                                                              ),
-                                                                          hintText:
-                                                                              'Selecionar Canal',
-                                                                          icon:
-                                                                              Icon(
-                                                                            Icons.keyboard_arrow_down_rounded,
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                            size:
-                                                                                24.0,
-                                                                          ),
-                                                                          fillColor:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                          elevation:
-                                                                              1.0,
-                                                                          borderColor:
-                                                                              Color(0xFFB3B8C1),
-                                                                          borderWidth:
-                                                                              1.0,
-                                                                          borderRadius:
-                                                                              12.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
-                                                                              16.0,
-                                                                              4.0,
-                                                                              16.0,
-                                                                              4.0),
-                                                                          hidesUnderline:
-                                                                              true,
-                                                                          isSearchable:
-                                                                              false,
-                                                                        ),
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            10.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child: FlutterFlowDropDown<
-                                                                            String>(
-                                                                          controller: _model.dropDownValueController3 ??=
-                                                                              FormFieldController<String>(null),
-                                                                          options: [
-                                                                            'E-mail',
-                                                                            'SMS',
-                                                                            'Whatsapp'
-                                                                          ],
-                                                                          onChanged: (val) =>
-                                                                              setState(() => _model.dropDownValue3 = val),
-                                                                          width:
-                                                                              320.0,
-                                                                          height:
-                                                                              50.0,
-                                                                          textStyle: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: 'Axiforma',
-                                                                                color: Color(0xFF323C47),
-                                                                                useGoogleFonts: false,
-                                                                              ),
-                                                                          hintText:
-                                                                              'Selecionar Template',
-                                                                          icon:
-                                                                              Icon(
-                                                                            Icons.keyboard_arrow_down_rounded,
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                            size:
-                                                                                24.0,
-                                                                          ),
-                                                                          fillColor:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                          elevation:
-                                                                              1.0,
-                                                                          borderColor:
-                                                                              Color(0xFFB3B8C1),
-                                                                          borderWidth:
-                                                                              1.0,
-                                                                          borderRadius:
-                                                                              12.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
-                                                                              16.0,
-                                                                              4.0,
-                                                                              16.0,
-                                                                              4.0),
-                                                                          hidesUnderline:
-                                                                              true,
-                                                                          isSearchable:
-                                                                              false,
-                                                                        ),
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            10.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child: FlutterFlowDropDown<
-                                                                            String>(
-                                                                          controller: _model.dropDownValueController4 ??=
-                                                                              FormFieldController<String>(null),
-                                                                          options: [
-                                                                            'E-mail',
-                                                                            'SMS',
-                                                                            'Whatsapp'
-                                                                          ],
-                                                                          onChanged: (val) =>
-                                                                              setState(() => _model.dropDownValue4 = val),
-                                                                          width:
-                                                                              320.0,
-                                                                          height:
-                                                                              50.0,
-                                                                          textStyle: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .override(
-                                                                                fontFamily: 'Axiforma',
-                                                                                color: Color(0xFF323C47),
-                                                                                useGoogleFonts: false,
-                                                                              ),
-                                                                          hintText:
-                                                                              'Selecionar Lista',
-                                                                          icon:
-                                                                              Icon(
-                                                                            Icons.keyboard_arrow_down_rounded,
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                            size:
-                                                                                24.0,
-                                                                          ),
-                                                                          fillColor:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                          elevation:
-                                                                              1.0,
-                                                                          borderColor:
-                                                                              Color(0xFFB3B8C1),
-                                                                          borderWidth:
-                                                                              1.0,
-                                                                          borderRadius:
-                                                                              12.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
-                                                                              16.0,
-                                                                              4.0,
-                                                                              16.0,
-                                                                              4.0),
-                                                                          hidesUnderline:
-                                                                              true,
-                                                                          isSearchable:
-                                                                              false,
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Flexible(
-                                                                child: Column(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  crossAxisAlignment:
-                                                                      CrossAxisAlignment
-                                                                          .start,
-                                                                  children: [
-                                                                    Flexible(
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            20.0),
-                                                                        child:
-                                                                            Text(
-                                                                          'Adicionar contato avulso, max 10',
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .start,
+                                                          children: [
+                                                            Flexible(
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .start,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child: Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .min,
+                                                                      children: [
+                                                                        Text(
+                                                                          'Preencha o formulário abaixo',
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .bodyMedium
                                                                               .override(
@@ -747,87 +401,417 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                                 useGoogleFonts: false,
                                                                               ),
                                                                         ),
-                                                                      ),
+                                                                      ],
                                                                     ),
-                                                                    Container(
+                                                                  ),
+                                                                  Flexible(
+                                                                    child:
+                                                                        Container(
                                                                       width:
                                                                           320.0,
-                                                                      decoration:
-                                                                          BoxDecoration(),
                                                                       child:
-                                                                          Container(
-                                                                        width:
-                                                                            320.0,
-                                                                        child:
-                                                                            TextFormField(
-                                                                          controller:
-                                                                              _model.textController2,
-                                                                          obscureText:
-                                                                              false,
-                                                                          decoration:
-                                                                              InputDecoration(
-                                                                            labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                  fontFamily: 'Axiforma',
-                                                                                  color: Color(0xFF14181B),
-                                                                                  useGoogleFonts: false,
-                                                                                ),
-                                                                            hintText:
-                                                                                'Pesquisar contato/incluir número de sms',
-                                                                            hintStyle:
-                                                                                FlutterFlowTheme.of(context).labelMedium,
-                                                                            enabledBorder:
-                                                                                OutlineInputBorder(
-                                                                              borderSide: BorderSide(
+                                                                          TextFormField(
+                                                                        controller:
+                                                                            _model.textController1,
+                                                                        obscureText:
+                                                                            false,
+                                                                        decoration:
+                                                                            InputDecoration(
+                                                                          labelText:
+                                                                              'Nomde da Campnha',
+                                                                          labelStyle: FlutterFlowTheme.of(context)
+                                                                              .labelMedium
+                                                                              .override(
+                                                                                fontFamily: 'Axiforma',
                                                                                 color: Color(0xFFB3B8C1),
-                                                                                width: 1.0,
+                                                                                useGoogleFonts: false,
                                                                               ),
-                                                                              borderRadius: BorderRadius.circular(12.0),
+                                                                          hintStyle:
+                                                                              FlutterFlowTheme.of(context).labelMedium,
+                                                                          enabledBorder:
+                                                                              OutlineInputBorder(
+                                                                            borderSide:
+                                                                                BorderSide(
+                                                                              color: Color(0xFFB3B8C1),
+                                                                              width: 1.0,
                                                                             ),
-                                                                            focusedBorder:
-                                                                                OutlineInputBorder(
-                                                                              borderSide: BorderSide(
-                                                                                color: FlutterFlowTheme.of(context).rosaBTN,
-                                                                                width: 1.0,
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(12.0),
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(12.0),
+                                                                          ),
+                                                                          focusedBorder:
+                                                                              OutlineInputBorder(
+                                                                            borderSide:
+                                                                                BorderSide(
+                                                                              color: FlutterFlowTheme.of(context).rosaBTN,
+                                                                              width: 1.0,
                                                                             ),
-                                                                            errorBorder:
-                                                                                OutlineInputBorder(
-                                                                              borderSide: BorderSide(
-                                                                                color: FlutterFlowTheme.of(context).error,
-                                                                                width: 1.0,
-                                                                              ),
-                                                                              borderRadius: BorderRadius.circular(12.0),
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(12.0),
+                                                                          ),
+                                                                          errorBorder:
+                                                                              OutlineInputBorder(
+                                                                            borderSide:
+                                                                                BorderSide(
+                                                                              color: FlutterFlowTheme.of(context).error,
+                                                                              width: 1.0,
                                                                             ),
-                                                                            focusedErrorBorder:
-                                                                                OutlineInputBorder(
-                                                                              borderSide: BorderSide(
-                                                                                color: FlutterFlowTheme.of(context).error,
-                                                                                width: 1.0,
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(12.0),
+                                                                          ),
+                                                                          focusedErrorBorder:
+                                                                              OutlineInputBorder(
+                                                                            borderSide:
+                                                                                BorderSide(
+                                                                              color: FlutterFlowTheme.of(context).error,
+                                                                              width: 1.0,
+                                                                            ),
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(12.0),
+                                                                          ),
+                                                                        ),
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyMedium,
+                                                                        validator: _model
+                                                                            .textController1Validator
+                                                                            .asValidator(context),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child: FlutterFlowDropDown<
+                                                                        String>(
+                                                                      controller: _model
+                                                                          .dropDownValueController1 ??= FormFieldController<
+                                                                              String>(
+                                                                          null),
+                                                                      options: [
+                                                                        'E-mail',
+                                                                        'SMS',
+                                                                        'Whatsapp'
+                                                                      ],
+                                                                      onChanged:
+                                                                          (val) =>
+                                                                              setState(() => _model.dropDownValue1 = val),
+                                                                      width:
+                                                                          320.0,
+                                                                      height:
+                                                                          50.0,
+                                                                      textStyle:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .bodyMedium,
+                                                                      hintText:
+                                                                          'Selecionar Mídia',
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .keyboard_arrow_down_rounded,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        size:
+                                                                            24.0,
+                                                                      ),
+                                                                      fillColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .secondaryBackground,
+                                                                      elevation:
+                                                                          1.0,
+                                                                      borderColor:
+                                                                          Color(
+                                                                              0xFFB3B8C1),
+                                                                      borderWidth:
+                                                                          1.0,
+                                                                      borderRadius:
+                                                                          12.0,
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          16.0,
+                                                                          4.0,
+                                                                          16.0,
+                                                                          4.0),
+                                                                      hidesUnderline:
+                                                                          true,
+                                                                      isSearchable:
+                                                                          false,
+                                                                    ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child: FlutterFlowDropDown<
+                                                                        String>(
+                                                                      controller: _model
+                                                                          .dropDownValueController2 ??= FormFieldController<
+                                                                              String>(
+                                                                          null),
+                                                                      options: [
+                                                                        'E-mail',
+                                                                        'SMS',
+                                                                        'Whatsapp'
+                                                                      ],
+                                                                      onChanged:
+                                                                          (val) =>
+                                                                              setState(() => _model.dropDownValue2 = val),
+                                                                      width:
+                                                                          320.0,
+                                                                      height:
+                                                                          50.0,
+                                                                      textStyle:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .bodyMedium,
+                                                                      hintText:
+                                                                          'Selecionar Canal',
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .keyboard_arrow_down_rounded,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        size:
+                                                                            24.0,
+                                                                      ),
+                                                                      fillColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .secondaryBackground,
+                                                                      elevation:
+                                                                          1.0,
+                                                                      borderColor:
+                                                                          Color(
+                                                                              0xFFB3B8C1),
+                                                                      borderWidth:
+                                                                          1.0,
+                                                                      borderRadius:
+                                                                          12.0,
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          16.0,
+                                                                          4.0,
+                                                                          16.0,
+                                                                          4.0),
+                                                                      hidesUnderline:
+                                                                          true,
+                                                                      isSearchable:
+                                                                          false,
+                                                                    ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child: FlutterFlowDropDown<
+                                                                        String>(
+                                                                      controller: _model
+                                                                          .dropDownValueController3 ??= FormFieldController<
+                                                                              String>(
+                                                                          null),
+                                                                      options: [
+                                                                        'E-mail',
+                                                                        'SMS',
+                                                                        'Whatsapp'
+                                                                      ],
+                                                                      onChanged:
+                                                                          (val) =>
+                                                                              setState(() => _model.dropDownValue3 = val),
+                                                                      width:
+                                                                          320.0,
+                                                                      height:
+                                                                          50.0,
+                                                                      textStyle:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .bodyMedium,
+                                                                      hintText:
+                                                                          'Selecionar Template',
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .keyboard_arrow_down_rounded,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        size:
+                                                                            24.0,
+                                                                      ),
+                                                                      fillColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .secondaryBackground,
+                                                                      elevation:
+                                                                          1.0,
+                                                                      borderColor:
+                                                                          Color(
+                                                                              0xFFB3B8C1),
+                                                                      borderWidth:
+                                                                          1.0,
+                                                                      borderRadius:
+                                                                          12.0,
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          16.0,
+                                                                          4.0,
+                                                                          16.0,
+                                                                          4.0),
+                                                                      hidesUnderline:
+                                                                          true,
+                                                                      isSearchable:
+                                                                          false,
+                                                                    ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child: FlutterFlowDropDown<
+                                                                        String>(
+                                                                      controller: _model
+                                                                          .dropDownValueController4 ??= FormFieldController<
+                                                                              String>(
+                                                                          null),
+                                                                      options: [
+                                                                        'E-mail',
+                                                                        'SMS',
+                                                                        'Whatsapp'
+                                                                      ],
+                                                                      onChanged:
+                                                                          (val) =>
+                                                                              setState(() => _model.dropDownValue4 = val),
+                                                                      width:
+                                                                          320.0,
+                                                                      height:
+                                                                          50.0,
+                                                                      textStyle:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .bodyMedium,
+                                                                      hintText:
+                                                                          'Selecionar Lista',
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .keyboard_arrow_down_rounded,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        size:
+                                                                            24.0,
+                                                                      ),
+                                                                      fillColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .secondaryBackground,
+                                                                      elevation:
+                                                                          1.0,
+                                                                      borderColor:
+                                                                          Color(
+                                                                              0xFFB3B8C1),
+                                                                      borderWidth:
+                                                                          1.0,
+                                                                      borderRadius:
+                                                                          12.0,
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          16.0,
+                                                                          4.0,
+                                                                          16.0,
+                                                                          4.0),
+                                                                      hidesUnderline:
+                                                                          true,
+                                                                      isSearchable:
+                                                                          false,
+                                                                    ),
+                                                                  ),
+                                                                ].divide(SizedBox(
+                                                                    height:
+                                                                        16.0)),
+                                                              ),
+                                                            ),
+                                                            Flexible(
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .start,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Text(
+                                                                    'Pré-visualização da mensagem',
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Axiforma',
+                                                                          fontSize:
+                                                                              16.0,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                          useGoogleFonts:
+                                                                              false,
+                                                                        ),
+                                                                  ),
+                                                                  Flexible(
+                                                                    child: Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .min,
+                                                                      children:
+                                                                          [
+                                                                        Flexible(
+                                                                          child:
+                                                                              Container(
+                                                                            width:
+                                                                                320.0,
+                                                                            child:
+                                                                                TextFormField(
+                                                                              controller: _model.textController2,
+                                                                              obscureText: false,
+                                                                              decoration: InputDecoration(
+                                                                                labelText: 'Mensagem',
+                                                                                labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                      fontFamily: 'Axiforma',
+                                                                                      color: Color(0xFF14181B),
+                                                                                      useGoogleFonts: false,
+                                                                                    ),
+                                                                                hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                                                                                enabledBorder: OutlineInputBorder(
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFFB3B8C1),
+                                                                                    width: 1.0,
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(12.0),
+                                                                                ),
+                                                                                focusedBorder: OutlineInputBorder(
+                                                                                  borderSide: BorderSide(
+                                                                                    color: FlutterFlowTheme.of(context).rosaBTN,
+                                                                                    width: 1.0,
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(12.0),
+                                                                                ),
+                                                                                errorBorder: OutlineInputBorder(
+                                                                                  borderSide: BorderSide(
+                                                                                    color: FlutterFlowTheme.of(context).error,
+                                                                                    width: 1.0,
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(12.0),
+                                                                                ),
+                                                                                focusedErrorBorder: OutlineInputBorder(
+                                                                                  borderSide: BorderSide(
+                                                                                    color: FlutterFlowTheme.of(context).error,
+                                                                                    width: 1.0,
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(12.0),
+                                                                                ),
                                                                               ),
-                                                                              borderRadius: BorderRadius.circular(12.0),
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium,
+                                                                              maxLines: null,
+                                                                              validator: _model.textController2Validator.asValidator(context),
                                                                             ),
                                                                           ),
-                                                                          style:
-                                                                              FlutterFlowTheme.of(context).bodyMedium,
-                                                                          validator: _model
-                                                                              .textController2Validator
-                                                                              .asValidator(context),
                                                                         ),
-                                                                      ),
+                                                                        Icon(
+                                                                          Icons
+                                                                              .add,
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).pacoDark,
+                                                                          size:
+                                                                              24.0,
+                                                                        ),
+                                                                      ].divide(SizedBox(
+                                                                              width: 8.0)),
                                                                     ),
-                                                                    Container(
-                                                                      width:
-                                                                          320.0,
-                                                                      decoration:
-                                                                          BoxDecoration(),
-                                                                    ),
-                                                                  ],
-                                                                ),
+                                                                  ),
+                                                                ].divide(SizedBox(
+                                                                    height:
+                                                                        16.0)),
                                                               ),
-                                                            ].divide(SizedBox(
-                                                                width: 70.0)),
-                                                          ),
+                                                            ),
+                                                          ].divide(SizedBox(
+                                                              width: 60.0)),
                                                         ),
                                                       ),
                                                       Divider(
@@ -875,16 +859,13 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
-                                                                  24.0,
+                                                                  36.0,
                                                                   0.0,
-                                                                  24.0,
-                                                                  7.0),
+                                                                  36.0,
+                                                                  0.0),
                                                       child: Row(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
                                                         crossAxisAlignment:
                                                             CrossAxisAlignment
                                                                 .start,
@@ -894,8 +875,7 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                               print(
                                                                   'Button pressed ...');
                                                             },
-                                                            text:
-                                                                'Salvar campanha',
+                                                            text: 'Salvar',
                                                             options:
                                                                 FFButtonOptions(
                                                               width: 130.0,
@@ -914,8 +894,9 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                           0.0,
                                                                           0.0,
                                                                           3.0),
-                                                              color: Color(
-                                                                  0x00C30064),
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .rosaBTN,
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)
@@ -923,8 +904,8 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Axiforma',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .rosaBTN,
+                                                                        color: Color(
+                                                                            0xFFE1E5EB),
                                                                         fontSize:
                                                                             12.0,
                                                                         fontWeight:
@@ -935,9 +916,8 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                               elevation: 0.0,
                                                               borderSide:
                                                                   BorderSide(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .rosaBTN,
+                                                                color: Colors
+                                                                    .transparent,
                                                                 width: 0.0,
                                                               ),
                                                               borderRadius:
@@ -948,90 +928,59 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                             showLoadingIndicator:
                                                                 false,
                                                           ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        200.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            child: Container(
-                                                              width: 140.0,
-                                                              height: 51.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryBackground,
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            12.0),
-                                                                border:
-                                                                    Border.all(
-                                                                  color: Color(
-                                                                      0xBA878787),
-                                                                  width: 1.0,
-                                                                ),
-                                                              ),
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      0.0, 0.0),
-                                                              child: Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Expanded(
+                                                          Flexible(
+                                                            child: Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .max,
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .center,
+                                                              children: [
+                                                                Flexible(
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            8.0,
+                                                                            0.0,
+                                                                            8.0,
+                                                                            0.0),
                                                                     child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          20.0,
-                                                                          0.0,
-                                                                          8.0,
-                                                                          0.0),
+                                                                        Container(
+                                                                      width:
+                                                                          150.0,
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
                                                                             _model.textController3,
-                                                                        autofocus:
-                                                                            true,
                                                                         obscureText:
                                                                             false,
                                                                         decoration:
                                                                             InputDecoration(
                                                                           labelText:
-                                                                              'Dia',
+                                                                              'Dia: 00/00/0000',
                                                                           labelStyle: FlutterFlowTheme.of(context)
                                                                               .labelMedium
                                                                               .override(
                                                                                 fontFamily: 'Axiforma',
-                                                                                fontSize: 12.0,
+                                                                                color: Color(0xFFADB5BD),
                                                                                 useGoogleFonts: false,
                                                                               ),
-                                                                          hintText:
-                                                                              '00/00/0000',
-                                                                          hintStyle: FlutterFlowTheme.of(context)
-                                                                              .labelMedium
-                                                                              .override(
-                                                                                fontFamily: 'Axiforma',
-                                                                                fontSize: 10.0,
-                                                                                fontWeight: FontWeight.w200,
-                                                                                useGoogleFonts: false,
-                                                                              ),
+                                                                          hintStyle:
+                                                                              FlutterFlowTheme.of(context).labelMedium,
                                                                           enabledBorder:
-                                                                              UnderlineInputBorder(
+                                                                              OutlineInputBorder(
                                                                             borderSide:
                                                                                 BorderSide(
-                                                                              color: FlutterFlowTheme.of(context).alternate,
+                                                                              color: Color(0xFFB3B8C1),
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           focusedBorder:
-                                                                              UnderlineInputBorder(
+                                                                              OutlineInputBorder(
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: FlutterFlowTheme.of(context).primary,
@@ -1041,7 +990,7 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           errorBorder:
-                                                                              UnderlineInputBorder(
+                                                                              OutlineInputBorder(
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: FlutterFlowTheme.of(context).error,
@@ -1051,7 +1000,7 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           focusedErrorBorder:
-                                                                              UnderlineInputBorder(
+                                                                              OutlineInputBorder(
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: FlutterFlowTheme.of(context).error,
@@ -1063,120 +1012,57 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium,
-                                                                        textAlign:
-                                                                            TextAlign.center,
                                                                         validator: _model
                                                                             .textController3Validator
                                                                             .asValidator(context),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  Padding(
+                                                                ),
+                                                                Flexible(
+                                                                  child:
+                                                                      Padding(
                                                                     padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                            0.0,
+                                                                            8.0,
                                                                             0.0,
                                                                             8.0,
                                                                             0.0),
                                                                     child:
-                                                                        ClipRRect(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              0.0),
-                                                                      child: Image
-                                                                          .asset(
-                                                                        'assets/images/material-symbols_calendar-month.png',
-                                                                        width:
-                                                                            25.0,
-                                                                        height:
-                                                                            25.0,
-                                                                        fit: BoxFit
-                                                                            .cover,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        200.0,
-                                                                        0.0),
-                                                            child: Container(
-                                                              width: 140.0,
-                                                              height: 51.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryBackground,
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            12.0),
-                                                                border:
-                                                                    Border.all(
-                                                                  color: Color(
-                                                                      0xBA878787),
-                                                                  width: 1.0,
-                                                                ),
-                                                              ),
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      0.0, 0.0),
-                                                              child: Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Expanded(
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          20.0,
-                                                                          0.0,
-                                                                          8.0,
-                                                                          0.0),
+                                                                        Container(
+                                                                      width:
+                                                                          150.0,
                                                                       child:
                                                                           TextFormField(
                                                                         controller:
                                                                             _model.textController4,
-                                                                        autofocus:
-                                                                            true,
                                                                         obscureText:
                                                                             false,
                                                                         decoration:
                                                                             InputDecoration(
                                                                           labelText:
-                                                                              'Horário',
+                                                                              'Horário: 00:00',
                                                                           labelStyle: FlutterFlowTheme.of(context)
                                                                               .labelMedium
                                                                               .override(
                                                                                 fontFamily: 'Axiforma',
-                                                                                fontSize: 12.0,
+                                                                                color: Color(0xFFADB5BD),
                                                                                 useGoogleFonts: false,
                                                                               ),
-                                                                          hintText:
-                                                                              '00:00',
                                                                           hintStyle:
                                                                               FlutterFlowTheme.of(context).labelMedium,
                                                                           enabledBorder:
-                                                                              UnderlineInputBorder(
+                                                                              OutlineInputBorder(
                                                                             borderSide:
                                                                                 BorderSide(
-                                                                              color: FlutterFlowTheme.of(context).alternate,
+                                                                              color: Color(0xFFB3B8C1),
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           focusedBorder:
-                                                                              UnderlineInputBorder(
+                                                                              OutlineInputBorder(
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: FlutterFlowTheme.of(context).primary,
@@ -1186,7 +1072,7 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           errorBorder:
-                                                                              UnderlineInputBorder(
+                                                                              OutlineInputBorder(
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: FlutterFlowTheme.of(context).error,
@@ -1196,7 +1082,7 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                           focusedErrorBorder:
-                                                                              UnderlineInputBorder(
+                                                                              OutlineInputBorder(
                                                                             borderSide:
                                                                                 BorderSide(
                                                                               color: FlutterFlowTheme.of(context).error,
@@ -1208,53 +1094,22 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium,
-                                                                        textAlign:
-                                                                            TextAlign.center,
                                                                         validator: _model
                                                                             .textController4Validator
                                                                             .asValidator(context),
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  Padding(
-                                                                    padding: EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            8.0,
-                                                                            0.0),
-                                                                    child:
-                                                                        ClipRRect(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              0.0),
-                                                                      child: Image
-                                                                          .asset(
-                                                                        'assets/images/Frame.png',
-                                                                        width:
-                                                                            25.0,
-                                                                        height:
-                                                                            25.0,
-                                                                        fit: BoxFit
-                                                                            .cover,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                ],
-                                                              ),
+                                                                ),
+                                                              ],
                                                             ),
                                                           ),
                                                           FFButtonWidget(
-                                                            onPressed: () {
-                                                              print(
-                                                                  'Button pressed ...');
+                                                            onPressed:
+                                                                () async {
+                                                              context.safePop();
                                                             },
-                                                            text:
-                                                                'Enviar agora',
-                                                            icon: Icon(
-                                                              Icons.send_sharp,
-                                                              size: 15.0,
-                                                            ),
+                                                            text: 'Cancelar',
                                                             options:
                                                                 FFButtonOptions(
                                                               width: 130.0,
@@ -1274,7 +1129,7 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                           0.0,
                                                                           3.0),
                                                               color: Color(
-                                                                  0xFFC30064),
+                                                                  0xFFEFEFEF),
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
                                                                           context)
@@ -1282,8 +1137,8 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Axiforma',
-                                                                        color: Colors
-                                                                            .white,
+                                                                        color: Color(
+                                                                            0xFF393D42),
                                                                         fontSize:
                                                                             12.0,
                                                                         fontWeight:
@@ -1294,8 +1149,8 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                               elevation: 0.0,
                                                               borderSide:
                                                                   BorderSide(
-                                                                color: Color(
-                                                                    0x00C30064),
+                                                                color: Colors
+                                                                    .transparent,
                                                                 width: 0.0,
                                                               ),
                                                               borderRadius:
@@ -1306,7 +1161,8 @@ class _CriarCampanhasWidgetState extends State<CriarCampanhasWidget> {
                                                             showLoadingIndicator:
                                                                 false,
                                                           ),
-                                                        ],
+                                                        ].divide(SizedBox(
+                                                            width: 50.0)),
                                                       ),
                                                     ),
                                                   ),

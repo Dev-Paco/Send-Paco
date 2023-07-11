@@ -77,19 +77,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => CriarTemplatesWidget(),
         ),
         FFRoute(
-          name: 'CriarCampanhas',
-          path: '/criarCampanhas',
-          builder: (context, params) => CriarCampanhasWidget(),
-        ),
-        FFRoute(
           name: 'Contatos',
           path: '/contatos',
           builder: (context, params) => ContatosWidget(),
-        ),
-        FFRoute(
-          name: 'CriarContato',
-          path: '/criarContato',
-          builder: (context, params) => CriarContatoWidget(),
         ),
         FFRoute(
           name: 'Canais',
@@ -107,14 +97,44 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => GruposWidget(),
         ),
         FFRoute(
+          name: 'Empresas',
+          path: '/empresas',
+          builder: (context, params) => EmpresasWidget(),
+        ),
+        FFRoute(
+          name: 'CriarContatos',
+          path: '/criarContatos',
+          builder: (context, params) => CriarContatosWidget(),
+        ),
+        FFRoute(
+          name: 'CriarCampanhas',
+          path: '/criarCampanhas',
+          builder: (context, params) => CriarCampanhasWidget(),
+        ),
+        FFRoute(
+          name: 'CriarEmpresa',
+          path: '/criarEmpresa',
+          builder: (context, params) => CriarEmpresaWidget(),
+        ),
+        FFRoute(
+          name: 'CriarCanais',
+          path: '/criarCanais',
+          builder: (context, params) => CriarCanaisWidget(),
+        ),
+        FFRoute(
+          name: 'EditarUsuario',
+          path: '/editarUsuario',
+          builder: (context, params) => EditarUsuarioWidget(),
+        ),
+        FFRoute(
           name: 'EditarContato',
           path: '/editarContato',
           builder: (context, params) => EditarContatoWidget(),
         ),
         FFRoute(
-          name: 'Empresas',
-          path: '/empresas',
-          builder: (context, params) => EmpresasWidget(),
+          name: 'CriarUsuario',
+          path: '/criarUsuario',
+          builder: (context, params) => CriarUsuarioWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

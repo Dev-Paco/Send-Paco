@@ -21,9 +21,9 @@ class CriarTemplatesModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController1;
   String? Function(BuildContext, String?)? textController1Validator;
-  // State field(s) for TextField widget.
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  // State field(s) for TextFieldMensagem widget.
+  TextEditingController? textFieldMensagemController;
+  String? Function(BuildContext, String?)? textFieldMensagemControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -35,7 +35,7 @@ class CriarTemplatesModel extends FlutterFlowModel {
     unfocusNode.dispose();
     headerModel.dispose();
     textController1?.dispose();
-    textController2?.dispose();
+    textFieldMensagemController?.dispose();
   }
 
   /// Action blocks are added here.
